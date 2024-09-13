@@ -1,7 +1,17 @@
 import React from 'react';
 import BoxComponent from './Box';
 import TypographyComponent from './Typography';
+import ListComponent from './List';
 export default function Footer() {
+  const items = [
+    { label: "پرائیویسی پالیسی",  },
+    { label: '|',  },
+    { label: "اشتہارات",  },
+    { label: "|",  },
+    { label: "رابطہ کیجئے", },
+  ];
+
+
   return (
     <BoxComponent
     backgroundColor='var(--dull)'
@@ -14,28 +24,31 @@ export default function Footer() {
     >
       <BoxComponent
       sx={{
-        display:'flex',
         width:'20%',
+        display:'flex',
         justifyContent:'space-between',
         alignItems:'center',
       }}
       >
-        <TypographyComponent
-        width='100px'
-        borderRight='1px solid var(--light)'
-        sx={{cursor:'pointer'}}
-        >پرائیویسی پالیسی</TypographyComponent>
-        <TypographyComponent
-          width='60px'
-          sx={{cursor:'pointer'}}
-        borderRight='1px solid var(--light)'
-        >اشتہارات</TypographyComponent>
-        <TypographyComponent
-          width='80px'
-          sx={{cursor:'pointer'}}
-        >رابطہ کریں</TypographyComponent>
+        <ListComponent
+        sx={{
+          width:'100%',
+          display:'flex',
+          flexDirection:'row',
+          justifyContent:'space-around',
+          alignItems:'center',
+          fontSize:'12px'
+        }}
+              items={items.map((item) => (
+                <li key={item.label}>
+                    {item.label}
+                </li>
+              ))}
+            />
       </BoxComponent>
-      <TypographyComponent>Copyright © 2024. All Rights Reserved</TypographyComponent>
+      <TypographyComponent
+      fontSize="12px"
+      >Copyright © 2024. All Rights Reserved | Website Designer JJs IT</TypographyComponent>
     </BoxComponent>
   );
 }
