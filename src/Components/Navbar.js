@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <BoxComponent
     sx={{
-        backgroundColor:'var(--info)',
+        backgroundColor:'var(--primary)',
         color:'var(--light)',
         padding:'2px 80px 2px 150px'
     }}
