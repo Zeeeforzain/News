@@ -11,7 +11,7 @@ export default function Title() {
         color:'var(--primary)',
       }}
       >
-      جاوید چوہدری
+      نئی نیوز
       </TypographyComponent>
     </BoxComponent>
   );

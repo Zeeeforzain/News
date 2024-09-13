@@ -2,6 +2,7 @@ import React from 'react';
 import BoxComponent from './Box';
 import TypographyComponent from './Typography';
 import './Theming.css';
+import Date from './Date';
 export default function Head() {
   return (
     <BoxComponent
@@ -28,12 +29,7 @@ export default function Head() {
         <img src="Images/twitter.png" alt="" width={'30px'} height={'30px'}/>
         <img src="Images/fb.png" alt="" width={'30px'} height={'30px'}/>
       </BoxComponent>
-      <TypographyComponent
-      fontFamily='var(--main)'
-      color='var(--light)'
-    >
-      جمعرات، 12 ستمبر 2024
-      </TypographyComponent>
+      <Date/>
     </BoxComponent>
   );
 }
