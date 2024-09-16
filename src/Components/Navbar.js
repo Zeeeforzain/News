@@ -95,7 +95,7 @@ export default function Navbar() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'flex-end', // Right justify items
-                gap: '10px', // Space between items
+                gap: '5px', // Space between items
                 width: '100%',
                 padding: 0,
                 marginTop:'20px',

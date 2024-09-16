@@ -22,7 +22,8 @@ const Date = () => {
     <BoxComponent>
       <TypographyComponent
       color="var(--light)"
-      fontSize={{xs:"12px", sm:'12px', md:'14px'}}
+      fontSize={{xs:"14px", sm:'12px', md:'14px'}}
+      fontWeight='600'
       >{currentDate}</TypographyComponent>
     </BoxComponent>
   );
