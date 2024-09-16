@@ -77,7 +77,7 @@ export default function Navbar() {
                 flexDirection: 'column',
                 alignItems: 'center',
                 padding: '20px',
-                width: '120px',
+                width: '125px',
               },
             }}
           >
