@@ -37,7 +37,7 @@ export default function Navbar() {
       sx={{
         backgroundColor: "var(--primary)",
         color: "var(--light)",
-        padding: { xs: "0px 10px", sm: '10px 20px', md: "10px 20px", lg: "2px 80px 2px 150px" },
+        padding: { xs: "5px 10px", sm: '10px 20px', md: "10px 20px", lg: "2px 80px 2px 150px" },
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
