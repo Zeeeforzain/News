@@ -46,28 +46,41 @@ export default function Navbar() {
       {isMobile ? (
         <>
          
+         <Date/>
           <IconButton
             color="inherit"
             onClick={handleDrawerToggle}
-            sx={{ display: { xs: "block", sm: "block", md: "none" } }}
+            sx={{ display: { xs: "flex", sm: "none", md: "none" },
+          flexDirection:'row'
+          }}
           >
+          <Title/>
             <MenuIcon />
           </IconButton>
-          <Title/>
-          <Date/>
           <Drawer
-            anchor="left"
+            anchor="right"
             open={drawerOpen}
             onClose={handleDrawerToggle}
             sx={{
               "& .MuiDrawer-paper": {
                 backgroundColor: "var(--primary)",
                 color: "var(--light)",
+                display:'flex',
+                alignItems:'center',
+                padding:'20px'
               },
             }}
           >
-            {/* Use ListComponent for Drawer items */}
-            <ListComponent items={items} />
+            <Title/>
+            <ListComponent
+            sx={{
+              display:'flex',
+              flexDirection:'column',
+              alignItems:'right',
+              width:'auto',
+              border:'2px solid white'
+            }}
+             items={items} />
           </Drawer>
         </>
       ) : (
