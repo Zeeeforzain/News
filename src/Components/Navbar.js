@@ -37,7 +37,7 @@ export default function Navbar() {
       sx={{
         backgroundColor: "var(--primary)",
         color: "var(--light)",
-        padding: { xs: "10px", sm:'10px 20px', md: "10px 20px", lg: "2px 80px 2px 150px" },
+        padding: { xs: "0px 10px", sm: '10px 20px', md: "10px 20px", lg: "2px 80px 2px 150px" },
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
@@ -45,16 +45,24 @@ export default function Navbar() {
     >
       {isMobile ? (
         <>
-         
-         <Date/>
+          <Date />
           <IconButton
             color="inherit"
             onClick={handleDrawerToggle}
-            sx={{ display: { xs: "flex", sm: "none", md: "none" },
-          flexDirection:'row'
-          }}
+            sx={{
+              display: { xs: "flex", sm: "none", md: "none" },
+              flexDirection: 'row',
+              gap:'10px'
+            }}
           >
-          <Title/>
+            <Title
+            sx={{
+              fontFamily:'var(--main)',
+              fontSize:'25px',
+              fontWeight:'600',
+              color:'var(--light)'
+            }}
+            />
             <MenuIcon />
           </IconButton>
           <Drawer
@@ -65,22 +73,35 @@ export default function Navbar() {
               "& .MuiDrawer-paper": {
                 backgroundColor: "var(--primary)",
                 color: "var(--light)",
-                display:'flex',
-                alignItems:'center',
-                padding:'20px'
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                padding: '20px',
+                width: '150px', // Adjust width if needed
               },
             }}
           >
-            <Title/>
+            <Title 
+              sx={{
+                fontFamily:'var(--main)',
+                fontSize:'30px',
+                fontWeight:'700',
+                color:'var(--light)'
+              }}
+            />
             <ListComponent
-            sx={{
-              display:'flex',
-              flexDirection:'column',
-              alignItems:'right',
-              width:'auto',
-              border:'2px solid white'
-            }}
-             items={items} />
+              items={items}
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'flex-end', // Right justify items
+                gap: '15px', // Space between items
+                width: '100%',
+                padding: 0,
+                marginTop:'20px',
+                listStyle: 'none',
+              }}
+            />
           </Drawer>
         </>
       ) : (
@@ -90,8 +111,7 @@ export default function Navbar() {
             flexDirection: "row",
             justifyContent: "space-between",
             alignItems: "center",
-            width: "100%",
-         
+            width: '100%',
           }}
         >
           {/* Use ListComponent for non-mobile view */}
@@ -104,7 +124,7 @@ export default function Navbar() {
               justifyContent: "space-between",
               alignItems: "center",
               fontFamily: "var(--main)",
-              fontSize: {xs:'12px',sm:'12px', md:'16px', lg:"20px"},
+              fontSize: { xs: '12px', sm: '12px', md: '16px', lg: "20px" },
             }}
           />
         </BoxComponent>

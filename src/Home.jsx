@@ -17,7 +17,14 @@ export default function Home() {
           justifyContent= "right"
           paddingRight={{ xs: "10px", sm: "10px", md: "10px", lg: "100px" }}
           >
-        <Title />
+        <Title
+        sx={{
+          fontFamily:'var(--main)',
+          fontSize:{sm:'35px', md:'40px', lg:'50px'},
+          fontWeight:'700',
+          color:'var(--primary)'
+        }}
+        />
       </BoxComponent>
       <Navbar />
       <News

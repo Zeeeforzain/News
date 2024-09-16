@@ -10,7 +10,6 @@ export default function ListComponent(props) {
         sx={{
             padding:'0px',
             width:'auto', 
-            border:'2px solid red',
             '&:hover':{
           textDecoration:'none',
           cursor:'pointer'
