@@ -52,7 +52,7 @@ export default function Navbar() {
             sx={{
               display: { xs: "flex", sm: "none", md: "none" },
               flexDirection: 'row',
-              gap:'10px'
+              gap:'5px'
             }}
           >
             <Title
@@ -84,7 +84,7 @@ export default function Navbar() {
             <Title 
               sx={{
                 fontFamily:'var(--main)',
-                fontSize:'30px',
+                fontSize:'25px',
                 fontWeight:'700',
                 color:'var(--light)'
               }}
@@ -95,7 +95,7 @@ export default function Navbar() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'flex-end', // Right justify items
-                gap: '15px', // Space between items
+                gap: '10px', // Space between items
                 width: '100%',
                 padding: 0,
                 marginTop:'20px',
