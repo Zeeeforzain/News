@@ -24,7 +24,7 @@ export default function Footer() {
     >
       <BoxComponent
       sx={{
-        width:'20%',
+        width:{xs:'60%',sm:'40%', md:'20%', xl:'12%'},
         display:'flex',
         justifyContent:'space-between',
         alignItems:'center',
