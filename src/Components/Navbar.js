@@ -77,7 +77,7 @@ export default function Navbar() {
                 flexDirection: 'column',
                 alignItems: 'center',
                 padding: '20px',
-                width: '150px', // Adjust width if needed
+                width: '120px',
               },
             }}
           >
@@ -93,9 +93,9 @@ export default function Navbar() {
               items={items}
               sx={{
                 display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'flex-end', // Right justify items
-                gap: '5px', // Space between items
+                flexDirection: 'column-reverse',
+                alignItems: 'flex-end', 
+                gap: '5px', 
                 width: '100%',
                 padding: 0,
                 marginTop:'20px',
@@ -114,7 +114,7 @@ export default function Navbar() {
             width: '100%',
           }}
         >
-          {/* Use ListComponent for non-mobile view */}
+         
           <ListComponent
             items={items}
             sx={{
