@@ -1,6 +1,5 @@
 import React from 'react';
 import BoxComponent from './Box';
-import TypographyComponent from './Typography';
 import './Theming.css';
 import Date from './Date';
 export default function Head() {
@@ -9,7 +8,7 @@ export default function Head() {
         backgroundColor='var(--dull)'
         padding={{xs:'10px 10px', md:'10px 20px', lg:'5px 100px'}}
         sx={{
-            display:'flex',
+            display:{xs:'none', sm:'flex'},
             flexDirection:'row',
             justifyContent:'space-between',
             alignItems:'center'

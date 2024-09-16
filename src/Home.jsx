@@ -11,26 +11,34 @@ export default function Home() {
   return (
     <BoxComponent>
       <Head />
-      <BoxComponent width="93%" display="flex" justifyContent="right">
+      <BoxComponent
+          width= "auto"
+          display={{xs:'none', sm:'flex'}}
+          justifyContent= "right"
+          paddingRight={{ xs: "10px", sm: "10px", md: "10px", lg: "100px" }}
+          >
         <Title />
       </BoxComponent>
       <Navbar />
       <News
         title="
-      پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان" img="Images/ik.png"
+      پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
+        img="Images/ik.png"
       />
       <News
         title="
-      پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان" img="Images/ik.png"
+      پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
+        img="Images/ik.png"
       />
       <News
         title="
-      پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان" img="Images/ik.png"
+      پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
+        img="Images/ik.png"
       />
       <Headlines
-       title="
-       پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان" img="Images/ik.png"
-       
+        title="
+       پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
+        img="Images/ik.png"
       />
       <Footer />
     </BoxComponent>

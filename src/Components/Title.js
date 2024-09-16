@@ -8,7 +8,7 @@ export default function Title() {
       sx={{
         fontFamily:'var(--main)',
         fontSize:{xs:'20px', md:'35px', lg:'50px'},
-        color:'var(--primary)',
+        color:{xs:'var(--light)', sm:'var(--primary)'},
       }}
       >
       نئی نیوز

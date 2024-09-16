@@ -1,30 +1,31 @@
-import React, { useState } from 'react';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import { useTheme, useMediaQuery } from '@mui/material';
-import Box from '@mui/material/Box';
+import React, { useState } from "react";
+import Drawer from "@mui/material/Drawer";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import ListComponent from "./List"; // Import your ListComponent
+import BoxComponent from "./Box"; // Assuming BoxComponent is a wrapper component
+import { useTheme, useMediaQuery } from "@mui/material";
+import Title from "./Title";
+import Date from "./Date";
 
 export default function Navbar() {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Check if screen size is xs or sm
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // Check if screen size is xs or sm
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const items = [
-    { label: "خصوصی فیچر" },
-    { label: "زیرو پوائنٹ" },
-    { label: "دلچسپ و عجیب" },
-    { label: "سائنس اور ٹیکنالوجی" },
-    { label: "صحت" },
-    { label: "بزنس" },
-    { label: "شوبز" },
-    { label: "کھیل" },
-    { label: "انٹرنیشنل" },
-    { label: "پاکستان" },
-    { label: "تازہ ترین" },
-    { label: "صفحۂ اول" },
+    "خصوصی فیچر",
+    "زیرو پوائنٹ",
+    "دلچسپ و عجیب",
+    "سائنس اور ٹیکنالوجی",
+    "صحت",
+    "بزنس",
+    "شوبز",
+    "کھیل",
+    "انٹرنیشنل",
+    "پاکستان",
+    "تازہ ترین",
+    "صفحۂ اول",
   ];
 
   const handleDrawerToggle = () => {
@@ -32,66 +33,69 @@ export default function Navbar() {
   };
 
   return (
-    <Box
+    <BoxComponent
       sx={{
-        backgroundColor: 'var(--primary)',
-        color: 'var(--light)',
-        padding: isMobile ? '10px' : '2px 80px 2px 150px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: isMobile ? 'flex-end' : 'space-between'
+        backgroundColor: "var(--primary)",
+        color: "var(--light)",
+        padding: { xs: "10px", sm:'10px 20px', md: "10px 20px", lg: "2px 80px 2px 150px" },
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
       }}
     >
-      {isMobile && (
+      {isMobile ? (
         <>
+         
           <IconButton
             color="inherit"
             onClick={handleDrawerToggle}
-            sx={{ display: { xs: 'block', sm: 'block', md: 'none' } }}
+            sx={{ display: { xs: "block", sm: "block", md: "none" } }}
           >
             <MenuIcon />
           </IconButton>
+          <Title/>
+          <Date/>
           <Drawer
             anchor="left"
             open={drawerOpen}
             onClose={handleDrawerToggle}
             sx={{
-              '& .MuiDrawer-paper': {
-                backgroundColor: 'var(--primary)',
-                color: 'var(--light)'
-              }
+              "& .MuiDrawer-paper": {
+                backgroundColor: "var(--primary)",
+                color: "var(--light)",
+              },
             }}
           >
-            <List>
-              {items.map((item) => (
-                <ListItem button key={item.label} sx={{ color: 'var(--light)' }}>
-                  {item.label}
-                </ListItem>
-              ))}
-            </List>
+            {/* Use ListComponent for Drawer items */}
+            <ListComponent items={items} />
           </Drawer>
         </>
-      )}
-
-      {!isMobile && (
-        <Box
+      ) : (
+        <BoxComponent
           sx={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-around',
-            alignItems: 'center',
-            width: '100%'
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+            width: "100%",
+         
           }}
         >
-          <List sx={{ display: 'flex', flexDirection: 'row', width: '100%' }}>
-            {items.map((item) => (
-              <ListItem key={item.label} sx={{ color: 'var(--light)', display: 'inline-block' }}>
-                {item.label}
-              </ListItem>
-            ))}
-          </List>
-        </Box>
+          {/* Use ListComponent for non-mobile view */}
+          <ListComponent
+            items={items}
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              width: "100%",
+              justifyContent: "space-between",
+              alignItems: "center",
+              fontFamily: "var(--main)",
+              fontSize: {xs:'12px',sm:'12px', md:'16px', lg:"20px"},
+            }}
+          />
+        </BoxComponent>
       )}
-    </Box>
+    </BoxComponent>
   );
 }
