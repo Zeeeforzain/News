@@ -46,6 +46,19 @@ export default function Navbar() {
       {isMobile ? (
         <>
           <Date />
+          <BoxComponent
+          display='flex'
+          flexDirection='row'
+          gap='5px' 
+          >
+          <Title
+            sx={{
+              fontFamily:'var(--main)',
+              fontSize:'25px',
+              fontWeight:'600',
+              color:'var(--light)'
+            }}
+            />
           <IconButton
             color="inherit"
             onClick={handleDrawerToggle}
@@ -55,16 +68,10 @@ export default function Navbar() {
               gap:'5px'
             }}
           >
-            <Title
-            sx={{
-              fontFamily:'var(--main)',
-              fontSize:'25px',
-              fontWeight:'600',
-              color:'var(--light)'
-            }}
-            />
+        
             <MenuIcon />
           </IconButton>
+          </BoxComponent>
           <Drawer
             anchor="right"
             open={drawerOpen}
