@@ -4,7 +4,7 @@ import 'moment/locale/ur'; // Import the Urdu locale
 import BoxComponent from './Box';
 import TypographyComponent from './Typography';
 
-const Date = () => {
+const Date = (props) => {
   // Set moment to use Urdu locale
   moment.locale('ur');
 
@@ -21,7 +21,7 @@ const Date = () => {
   return (
     <BoxComponent>
       <TypographyComponent
-      color="var(--light)"
+      color={props.color}
       fontSize={{xs:"14px", sm:'12px', md:'14px'}}
       fontWeight='600'
       >{currentDate}</TypographyComponent>

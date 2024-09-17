@@ -28,7 +28,9 @@ export default function Head() {
         <img src="Images/twitter.png" alt="" width={'30px'} height={'30px'}/>
         <img src="Images/fb.png" alt="" width={'30px'} height={'30px'}/>
       </BoxComponent>
-      <Date/>
+      <Date
+      color='var(--light)'
+      />
     </BoxComponent>
   );
 }

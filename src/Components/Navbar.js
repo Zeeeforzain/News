@@ -45,7 +45,7 @@ export default function Navbar() {
     >
       {isMobile ? (
         <>
-          <Date />
+          <Date color='var(--light)' />
           <BoxComponent
           display='flex'
           flexDirection='row'
