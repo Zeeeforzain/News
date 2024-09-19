@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -14,18 +15,18 @@ export default function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const items = [
-    "خصوصی فیچر",
-    "زیرو پوائنٹ",
-    "دلچسپ و عجیب",
-    "سائنس اور ٹیکنالوجی",
-    "صحت",
-    "بزنس",
-    "شوبز",
-    "کھیل",
-    "انٹرنیشنل",
-    "پاکستان",
-    "تازہ ترین",
-    "صفحۂ اول",
+    { label: "خصوصی فیچر", path: "/Special" },
+    { label: "زیرو پوائنٹ", path: "/ZeroPoint" },
+    { label: "دلچسپ و عجیب", path: "/Interesting" },
+    { label: "سائنس اور ٹیکنالوجی", path: "/Science" },
+    { label: "صحت", path: "/Health" },
+    { label: "بزنس", path: "/Business" },
+    { label: "شوبز", path: "/Showbiz" },
+    { label: "کھیل", path: "/Sports" },
+    { label: "انٹرنیشنل", path: "/International" },
+    { label: "پاکستان", path: "/Pakistan" },
+    { label: "تازہ ترین", path: "/FreshNews" },
+    { label: "صفحۂ اول", path: "/" },
   ];
 
   const handleDrawerToggle = () => {
@@ -47,30 +48,29 @@ export default function Navbar() {
         <>
           <Date color='var(--light)' />
           <BoxComponent
-          display='flex'
-          flexDirection='row'
-          gap='5px' 
+            display='flex'
+            flexDirection='row'
+            gap='5px' 
           >
-          <Title
-            sx={{
-              fontFamily:'var(--main)',
-              fontSize:'25px',
-              fontWeight:'600',
-              color:'var(--light)'
-            }}
+            <Title
+              sx={{
+                fontFamily:'var(--main)',
+                fontSize:'25px',
+                fontWeight:'600',
+                color:'var(--light)'
+              }}
             />
-          <IconButton
-            color="inherit"
-            onClick={handleDrawerToggle}
-            sx={{
-              display: { xs: "flex", sm: "none", md: "none" },
-              flexDirection: 'row',
-              gap:'5px'
-            }}
-          >
-        
-            <MenuIcon />
-          </IconButton>
+            <IconButton
+              color="inherit"
+              onClick={handleDrawerToggle}
+              sx={{
+                display: { xs: "flex", sm: "none", md: "none" },
+                flexDirection: 'row',
+                gap:'5px'
+              }}
+            >
+              <MenuIcon />
+            </IconButton>
           </BoxComponent>
           <Drawer
             anchor="right"
@@ -97,7 +97,11 @@ export default function Navbar() {
               }}
             />
             <ListComponent
-              items={items}
+              items={items.map(item => (
+                <Link to={item.path} style={{ textDecoration: 'none', color: 'inherit' }} key={item.label}>
+                  {item.label}
+                </Link>
+              ))}
               sx={{
                 display: 'flex',
                 flexDirection: 'column-reverse',
@@ -121,9 +125,12 @@ export default function Navbar() {
             width: '100%',
           }}
         >
-         
           <ListComponent
-            items={items}
+            items={items.map(item => (
+              <Link to={item.path} style={{ textDecoration: 'none', color: 'inherit' }} key={item.label}>
+                {item.label}
+              </Link>
+            ))}
             sx={{
               display: "flex",
               flexDirection: "row",

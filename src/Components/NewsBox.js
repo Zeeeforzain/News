@@ -5,10 +5,8 @@ import DetailNews from './DetailNews';
 
 export default function NewsBox(props) {
   return (
-    <BoxComponent
-    width='60%'
-    >
-       <TypographyComponent
+    <BoxComponent>
+         <TypographyComponent
         textAlign='right'
         fontSize='35px'
         fontWeight='700'
@@ -17,7 +15,6 @@ export default function NewsBox(props) {
         color='var(--primary)'
         borderBottom='1px solid var(--secondary)'
         >{props.title}</TypographyComponent>
-
 <DetailNews
         title="پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
         img="Images/ik.png"

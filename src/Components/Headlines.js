@@ -10,7 +10,7 @@ export default function Headlines(props) {
         flexDirection: 'column',
         justifyContent: 'space-between',
         width: props.width,
-        height: 'auto',
+        height: '40vh',
         marginTop: '10px',
       }}
     >

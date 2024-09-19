@@ -8,7 +8,7 @@ export default function News(props) {
     sx={{
         display:'flex',
         justifyContent:'space-between',
-        width:'25%',
+        width:'98%',
         height:'15vh',
         marginTop:'10px',
         borderBottom:'1px solid var(--secondary)'

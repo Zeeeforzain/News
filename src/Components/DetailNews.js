@@ -16,6 +16,9 @@ export default function DetailNews(props) {
         fontSize='22px'
         textAlign='right'
         marginBottom='20px'
+        width='100%'
+        height='5vh'
+        overflow="hidden"
         >{props.title}</TypographyComponent>
         <BoxComponent
             sx={{
@@ -36,6 +39,8 @@ export default function DetailNews(props) {
       <TypographyComponent
       textAlign="right"
       fontWeight="500"
+      height='8vh'
+      overflow="hidden"
       >
         {props.detail}
       </TypographyComponent>

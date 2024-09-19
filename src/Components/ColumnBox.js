@@ -6,16 +6,14 @@ import TypographyComponent from './Typography';
 
 export default function ColumnBox(props) {
   return (
-    <BoxComponent
-    width='25%'
-    >
+    <BoxComponent width='100%'>
         <TypographyComponent
         textAlign='right'
         fontSize='26px'
         fontWeight='700'
         marginTop='30px'
         borderTop='1px solid var(--secondary)'
-        >{props.title}</TypographyComponent>
+        >کالم</TypographyComponent>
        <Headlines
         title="
        پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
