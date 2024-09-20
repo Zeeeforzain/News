@@ -51,7 +51,7 @@ export default function DetailNews(props) {
           <TypographyComponent
             textAlign="right"
             fontWeight="500"
-            height='7vh'
+            height={{xs:'6vh', md:'7vh'}}
             overflow="hidden"
           >
             {props.detail} {/* Detail passed as a prop */}
