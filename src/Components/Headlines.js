@@ -1,10 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import BoxComponent from './Box';
 import TypographyComponent from './Typography';
 
 export default function Headlines(props) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/extended', { state: { title: props.title, detail: props.detail, img: props.img } });
+  };
+
   return (
     <BoxComponent
+      onClick={handleClick}
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -12,6 +20,7 @@ export default function Headlines(props) {
         width: props.width,
         height: '40vh',
         marginTop: '10px',
+        cursor: 'pointer', // Indicate it's clickable
       }}
     >
       <BoxComponent
@@ -40,6 +49,17 @@ export default function Headlines(props) {
         fontSize="23px"
       >
         {props.title}
+      </TypographyComponent>
+      <TypographyComponent
+        textAlign='justify'
+        fontSize="25px"
+        fontFamily="var(--main)"
+        color="var(--dull)"
+        overflow='hidden'
+        width='0px'
+        height='0px'
+      >
+        {props.detail} {/* Assuming details are passed as props */}
       </TypographyComponent>
     </BoxComponent>
   );

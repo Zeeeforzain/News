@@ -3,9 +3,9 @@ import BoxComponent from "./Box";
 import TypographyComponent from "./Typography";
 import News from "./News";
 
-export default function MostReadNews() {
+export default function MostReadNews(props) {
   return (
-    <BoxComponent  marginTop="10px">
+    <BoxComponent  marginTop="10px" width={props.width}>
       <TypographyComponent
         fontSize="18px"
         fontWeight="700"
