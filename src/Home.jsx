@@ -62,7 +62,7 @@ export default function Home() {
               display="flex"
               flexDirection="column"
               justifyContent='right'
-              width={{ xs: "80%", md: "48%" }}
+              width={{ xs: "95%", md: "48%" }}
             >
               <News
                 title="پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
@@ -81,7 +81,7 @@ export default function Home() {
               />
             </BoxComponent>
             <Headlines
-              width={{ xs: "80%", md: "48%" }}
+              width={{ xs: "95%", md: "48%" }}
               title="پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
               img="Images/ik.png"
               detail=" پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"

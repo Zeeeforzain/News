@@ -28,7 +28,7 @@ export default function News(props) {
         textAlign='right'
         width="70%"
         fontWeight="600"
-        marginRight='10px'
+        marginRight='5px'
       >
         {props.title}
       </TypographyComponent>
