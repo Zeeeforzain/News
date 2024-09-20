@@ -12,11 +12,12 @@ export default function CommonComponent(props) {
      
         <BoxComponent
         width="30%"
+        display={{xs:'none', sm:'none', md:'flex'}}
         >
       <ColumnBox/>
         </BoxComponent>
         <BoxComponent
-        width="60%"
+        width={{xs:'90%',sm:'90%',md:"60%",lg:'60%'}}
         >
       <NewsBox title={props.title}/>
         </BoxComponent>

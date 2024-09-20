@@ -6,17 +6,22 @@ import News from "./News";
 
 export default function HomeNews(props) {
   return (
-    <BoxComponent width="47%">
+    <BoxComponent width={{xs:'100%',md:"47%"}}
+    display='flex'
+    flexDirection='column'
+    justifyContent="space-around"
+    alignItems='flex-end'
+    >
       <TypographyComponent
         fontSize="30px"
         fontWeight="700"
         fontFamily="var(--main)"
         color="var(--dull)"
-        textAlign="right"
       >
         {props.title}
       </TypographyComponent>
       <Headlines
+      width='90%'
         title="پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
         img="Images/ik.png"
         detail="

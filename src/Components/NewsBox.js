@@ -8,7 +8,7 @@ export default function NewsBox(props) {
     <BoxComponent>
       <TypographyComponent
         textAlign="right"
-        fontSize="35px"
+        fontSize={{xs:'30px', md:"40px", xl:'50px'}}
         fontWeight="700"
         marginTop="20px"
         marginBottom="20px"

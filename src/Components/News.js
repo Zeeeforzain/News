@@ -15,8 +15,8 @@ export default function News(props) {
       onClick={handleClick}
       sx={{
         display: 'flex',
-        justifyContent: 'space-between',
-        width: '98%',
+        justifyContent:'right',
+        width: '100%',
         height: '15vh',
         marginTop: '10px',
         borderBottom: '1px solid var(--secondary)',
@@ -24,10 +24,11 @@ export default function News(props) {
       }}
     >
       <TypographyComponent
-        textAlign="right"
         display='flex'
+        justifyContent='right'
         width="70%"
         fontWeight="600"
+        marginRight='10px'
       >
         {props.title}
       </TypographyComponent>
@@ -36,8 +37,6 @@ export default function News(props) {
           width: '80px',
           height: '80px',
           display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
         }}
       >
         <img 

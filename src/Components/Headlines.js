@@ -43,8 +43,9 @@ export default function Headlines(props) {
         />
       </BoxComponent>
       <TypographyComponent
-        textAlign="right"
         display='flex'
+        justifyContent='flex-end'
+        textAlign='right'
         fontWeight="700"
         fontSize="23px"
       >

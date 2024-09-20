@@ -31,56 +31,78 @@ export default function Home() {
       </BoxComponent>
       <Navbar />
       <BoxComponent
-      display='flex'
-      justifyContent='space-evenly'
-      ><BoxComponent display="flex" flexDirection="column" width="30%">
+        display="flex"
+        justifyContent={{ xs: "center", md: "space-evenly" }}
+        flexDirection={{ xs: "column-reverse", md: "row" }}
+      >
         <BoxComponent
-        height="105vh"
-        overflow='hidden'
-        marginBottom='600px'
+          display={{xs:'none', md:"flex"}}
+          flexDirection="column"
+          width={{ xs: "80%", md: "30%" }}
         >
-        <ColumnBox/>
+          <BoxComponent
+            height="105vh"
+            display={{ xs: "none", md: "flex" }}
+            overflow="hidden"
+            marginBottom="600px"
+          >
+            <ColumnBox />
+          </BoxComponent>
+          <MostReadNews width="95%" />
         </BoxComponent>
-        <MostReadNews width='95%'/>
-        </BoxComponent>
-        <BoxComponent width="60%" marginTop="10px">
-          <BoxComponent display="flex" justifyContent="space-around">
-            <BoxComponent display="flex" flexDirection="column" width="48%">
+        <BoxComponent width={{ xs: "100%", md: "60%" }} marginTop="10px">
+          <BoxComponent
+            display="flex"
+            flexDirection={{ xs: "column-reverse", md: "row" }}
+            justifyContent="space-around"
+            alignItems={{xs:'flex-end', md:'start'}}
+            marginRight='10px'
+          >
+            <BoxComponent
+              display="flex"
+              flexDirection="column"
+              justifyContent='right'
+              width={{ xs: "80%", md: "48%" }}
+            >
               <News
                 title="پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
                 img="Images/ik.png"
                 detail=" پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
-                />
+              />
               <News
                 title="پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
                 img="Images/ik.png"
                 detail=" پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
-                />
+              />
               <News
                 title="پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
                 img="Images/ik.png"
                 detail=" پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
-                />
+              />
             </BoxComponent>
             <Headlines
-              width="48%"
+              width={{ xs: "80%", md: "48%" }}
               title="پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
               img="Images/ik.png"
               detail=" پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
-              />
+            />
           </BoxComponent>
           <BoxComponent
             display="flex"
+            flexDirection={{xs:'column', md:'row'}}
             justifyContent="space-around"
             marginBottom="10px"
-          >
+            padding='20px'
+            >
             <HomeNews title="انٹرنیشنل" />
             <HomeNews title="پاکستان" />
           </BoxComponent>
           <BoxComponent
             display="flex"
+            flexDirection={{xs:'column', md:'row'}}
             justifyContent="space-around"
             marginBottom="10px"
+            padding='20px'
           >
             <HomeNews title="انٹرٹینمنٹ" />
             <HomeNews title="کھیل" />

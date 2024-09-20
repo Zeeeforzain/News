@@ -45,6 +45,7 @@ export default function DetailNews(props) {
           justifyContent="flex-start"
           alignItems='flex-end'
           width="60%"
+          marginRight='10px'
         >
           <Date />
           <TypographyComponent
@@ -58,8 +59,8 @@ export default function DetailNews(props) {
         </BoxComponent>
         <BoxComponent
           sx={{
-            width: '300px',
-            height: '150px',
+            width: {xs:'220px',md:'250px', lg:'300px',xl:'400px'} ,
+            height:  {xs:'100px',md:'120px', lg:'150px',xl:'200px'} ,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
