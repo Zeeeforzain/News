@@ -21,7 +21,7 @@ export default function HomeNews(props) {
         {props.title}
       </TypographyComponent>
       <Headlines
-      width='90%'
+      width='95%'
         title="پارٹی تیار ہے، سڑکوں پر آنے کا اعلان جلد کریں گے، عمران خان"
         img="Images/ik.png"
         detail="
