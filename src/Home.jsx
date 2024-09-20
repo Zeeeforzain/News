@@ -89,7 +89,7 @@ export default function Home() {
           </BoxComponent>
           <BoxComponent
             display="flex"
-            flexDirection={{xs:'column', md:'row'}}
+            flexDirection={{xs:'column-reverse', md:'row'}}
             justifyContent="space-around"
             marginBottom="10px"
             padding='20px'
@@ -99,7 +99,7 @@ export default function Home() {
           </BoxComponent>
           <BoxComponent
             display="flex"
-            flexDirection={{xs:'column', md:'row'}}
+            flexDirection={{xs:'column-reverse', md:'row'}}
             justifyContent="space-around"
             marginBottom="10px"
             padding='20px'
