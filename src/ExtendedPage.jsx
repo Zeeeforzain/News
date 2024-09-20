@@ -34,21 +34,22 @@ export default function ExtendedPage() {
     <BoxComponent>
       <BoxComponent
         display="flex"
+        flexDirection={{xs:'column-reverse', md:'row'}}
         justifyContent='space-evenly'
       >
-        <BoxComponent width="30%">
+        <BoxComponent width={{xs:'95%',md:"30%"}} margin='auto'>
           <ColumnBox />
         </BoxComponent>
-        <BoxComponent width="60%">
+        <BoxComponent width={{xs:'95%', md:"60%"}} margin='auto'>
           <ExtendedNews title={title} img={img} detail={detail} /> {/* Pass props to ExtendedNews */}
         </BoxComponent>
       </BoxComponent>
       <BoxComponent
         display='flex'
-        justifyContent='right'
-        padding='50px'
+        justifyContent={{xs:'center', md:'right'}}
+        padding={{xs:'0px',md:'50px'}}
       >
-        <MostReadNews width='30%' />
+        <MostReadNews width={{xs:'95%',md:'30%'}} />
       </BoxComponent>
     </BoxComponent>
     </>
