@@ -7,7 +7,7 @@ export default function Column(props) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/extended', { state: { title: props.title, detail: props.detail, img: props.img } });
+    navigate('/details', { state: { title: props.title, detail: props.detail, img: props.img } });
   };
 
   return (

@@ -7,6 +7,7 @@ import { useLocation } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Title from "./Components/Title";
 import Head from "./Components/Head";
+import Footer from './Components/Footer'
 
 export default function ExtendedPage() {
   const location = useLocation();
@@ -52,6 +53,7 @@ export default function ExtendedPage() {
         >
           <MostReadNews width={{ xs: "95%", md: "30%" }} />
         </BoxComponent>
+        <Footer/>
       </BoxComponent>
     </>
   );

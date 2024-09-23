@@ -15,17 +15,17 @@ export default function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const items = [
-    { label: "خصوصی فیچر", path: "/Special" },
-    { label: "زیرو پوائنٹ", path: "/ZeroPoint" },
-    { label: "دلچسپ و عجیب", path: "/Interesting" },
-    { label: "سائنس اور ٹیکنالوجی", path: "/Science" },
-    { label: "صحت", path: "/Health" },
-    { label: "بزنس", path: "/Business" },
-    { label: "شوبز", path: "/Showbiz" },
-    { label: "کھیل", path: "/Sports" },
-    { label: "انٹرنیشنل", path: "/International" },
-    { label: "پاکستان", path: "/Pakistan" },
-    { label: "تازہ ترین", path: "/FreshNews" },
+    { label: "خصوصی فیچر", path: "/special" },
+    { label: "زیرو پوائنٹ", path: "/zero-point" },
+    { label: "دلچسپ و عجیب", path: "/interesting" },
+    { label: "سائنس اور ٹیکنالوجی", path: "/science" },
+    { label: "صحت", path: "/health" },
+    { label: "بزنس", path: "/business" },
+    { label: "شوبز", path: "/showbiz" },
+    { label: "کھیل", path: "/sports" },
+    { label: "انٹرنیشنل", path: "/international" },
+    { label: "پاکستان", path: "/pakistan" },
+    { label: "تازہ ترین", path: "/fresh-news" },
     { label: "صفحۂ اول", path: "/" },
   ];
 

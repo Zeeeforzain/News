@@ -23,10 +23,10 @@ export default function Head() {
 
       }}
       >
-        <img src="Images/yt.png" alt="" width={'30px'} height={'30px'}/>
-        <img src="Images/insta.png" alt="" width={'30px'} height={'30px'}/>
-        <img src="Images/twitter.png" alt="" width={'30px'} height={'30px'}/>
-        <img src="Images/fb.png" alt="" width={'30px'} height={'30px'}/>
+        <img style={{cursor:'pointer'}} src="Images/yt.png" alt="" width={'30px'} height={'30px'}/>
+        <img style={{cursor:'pointer'}} src="Images/insta.png" alt="" width={'30px'} height={'30px'}/>
+        <img style={{cursor:'pointer'}} src="Images/twitter.png" alt="" width={'30px'} height={'30px'}/>
+        <img style={{cursor:'pointer'}} src="Images/fb.png" alt="" width={'30px'} height={'30px'}/>
       </BoxComponent>
       <Date
       color='var(--light)'

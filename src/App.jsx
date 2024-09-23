@@ -14,24 +14,26 @@ import Science from './Science';
 import International from './International';
 import Special from './Special';
 import ExtendedPage from './ExtendedPage'; // Import the ExtendedPage
+import Title from './Components/Title';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Sports" element={<Sports />} />
-        <Route path="/Business" element={<Bussiness />} />
-        <Route path="/FreshNews" element={<FreshNews />} />
-        <Route path="/Health" element={<Health />} />
-        <Route path="/Interesting" element={<Interesting />} />
-        <Route path="/Pakistan" element={<Pakistan />} />
-        <Route path="/International" element={<International />} />
-        <Route path="/Showbiz" element={<Showbiz />} />
-        <Route path="/Special" element={<Special />} />
-        <Route path="/ZeroPoint" element={<ZeroPoint />} />
-        <Route path="/Science" element={<Science />} />
-        <Route path="/extended" element={<ExtendedPage />} /> {/* Route for ExtendedPage */}
+        <Route path="/" element={<Title />} />
+        <Route path="/sports" element={<Sports />} />
+        <Route path="/business" element={<Bussiness />} />
+        <Route path="/fresh-news" element={<FreshNews />} />
+        <Route path="/health" element={<Health />} />
+        <Route path="/interesting" element={<Interesting />} />
+        <Route path="/pakistan" element={<Pakistan />} />
+        <Route path="/international" element={<International />} />
+        <Route path="/showbiz" element={<Showbiz />} />
+        <Route path="/special" element={<Special />} />
+        <Route path="/zero-point" element={<ZeroPoint />} />
+        <Route path="/science" element={<Science />} />
+        <Route path="/details" element={<ExtendedPage />} /> {/* Route for ExtendedPage */}
       </Routes>
     </Router>
   );

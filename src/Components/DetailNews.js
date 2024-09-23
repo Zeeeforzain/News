@@ -9,7 +9,7 @@ export default function DetailNews(props) {
 
   const handleClick = () => {
     // Navigate to the extended page with props
-    navigate('/extended', { state: { title: props.title, detail: props.detail, img: props.img } });
+    navigate('/details', { state: { title: props.title, detail: props.detail, img: props.img } });
   };
 
   return (
