@@ -44,8 +44,10 @@ export default function Column(props) {
         />
       </BoxComponent>
       <TypographyComponent
-        display='flex'
-        justifyContent='right'
+         display='flex'
+         alignItems='flex-start'
+         justifyContent='right'
+         textAlign='right'
         fontWeight="600"
         fontSize="12px"
       >

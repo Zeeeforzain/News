@@ -25,6 +25,8 @@ export default function News(props) {
     >
       <TypographyComponent
         display='flex'
+        alignItems='flex-start'
+        justifyContent='right'
         textAlign='right'
         width="70%"
         fontWeight="600"
